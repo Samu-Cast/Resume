@@ -1,0 +1,34 @@
+name: Build and Release CV
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '**.tex'
+
+jobs:
+  build_and_release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+
+      - name: Rename PDF
+        run: mv main.pdf Samuele_Castellani_CV.pdf
+
+      - name: Update Latest Release
+        uses: ncipollo/release-action@v1
+        with:
+          allowUpdates: true
+          tag: "latest"
+          name: "Latest CV"
+          body: "Compilazione automatizzata del CV aggiornato."
+          artifacts: "Samuele_Castellani_CV.pdf"
+          token: ${{ secrets.GITHUB_TOKEN }}
