@@ -4,7 +4,7 @@
 % Based off of: https://github.com/sb2nov/resume
 % License : MIT
 %------------------------
- 
+
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
@@ -24,7 +24,6 @@
 \setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
 
-
 %----------FONT OPTIONS----------
 % sans-serif
 % \usepackage[sfdefault]{FiraSans}
@@ -35,7 +34,6 @@
 % serif
 % \usepackage{CormorantGaramond}
 % \usepackage{charter}
-
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -166,16 +164,23 @@
 
     \resumeSubheading
       {Various Facilities}{Rieti, Italy}
-      {Lifeguard}{Summer 2022 -- Present}
+      {Lifeguard (Seasonal)}{Summers 2022 -- Present}
       \resumeItemListStart
-        \resumeItem{Monitored facility safety, demonstrating strong responsibility, vigilance, and crisis management skills in high-stress situations.}
+        \resumeItem{Monitored facility safety and managed high-stress situations, developing strong crisis management and responsibility skills during summer seasons.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
-\vspace{-15pt}
+\vspace{-10pt}
 
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
+      \resumeProjectHeading
+        {\textbf{Post-Quantum Cryptography Architecture (In Progress)} $|$ \emph{Python, Qiskit, NIST}}{Oct. 2026 -- Present}
+        \resumeItemListStart
+          \resumeItem{Designing a quantum-safe architectural framework focusing on post-quantum cryptographic algorithms and adhering to NIST guidelines.}
+          \resumeItem{Researching mitigation strategies against quantum threats and currently implementing a proof-of-concept module for secure data transmission.}
+        \resumeItemListEnd
+
       \resumeProjectHeading
         {\textbf{HoneyNet Architecture} $|$ \emph{Python, Docker, Cowrie, Dionaea, OpenCanary}}{2026}
         \resumeItemListStart
@@ -184,7 +189,7 @@
         \resumeItemListEnd
 
       \resumeProjectHeading
-        {\textbf{Autonomous Robot Navigation System} $|$ \emph{Python, Docker, GitHub Actions, Simulation Tools}}{2025 -- 2026}
+        {\textbf{Autonomous Robot Navigation System} $|$ \emph{Python, Docker, GitHub Actions, ROS2}}{2025 -- 2026}
         \resumeItemListStart
           \resumeItem{Developed an algorithm for an iRobot Create to autonomously navigate, locate coordinates, and identify color-coded objectives in a simulated environment.}
           \resumeItem{Tested the logic using robotics virtualization software before physical deployment, utilizing CI/CD pipelines for automated testing.}
@@ -196,21 +201,15 @@
           \resumeItem{Developed a digital ticket-booking dashboard simulating a public service queue system to study modern software engineering workflows.}
           \resumeItem{Set up a Continuous Integration and Deployment (CI/CD) pipeline using GitHub Actions and Docker to automate the build process.}
         \resumeItemListEnd
-
-      \resumeProjectHeading
-        {\textbf{Embedded Workflow Automation} $|$ \emph{C, ESP32, Arduino Pro Micro}}{2024 -- Present}
-        \resumeItemListStart
-          \resumeItem{Wrote C scripts for ESP32 and Pro Micro microcontrollers to automate external PC workflows directly at the hardware level.}
-        \resumeItemListEnd
     \resumeSubHeadingListEnd
-\vspace{-15pt}
+\vspace{-10pt}
 
 %-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Python, C/C++, Java, PHP, SQL, HTML/CSS, Assembly} \\
-     \textbf{Security \& Networking}{: Wireshark, Network Analysis, HTTP Hardening, RBAC, CSRF Prevention} \\
+     \textbf{Languages}{: C/C++, Java, Assembly, Python, SQL, PHP, HTML/CSS, } \\
+     \textbf{Security \& Networking}{: Wireshark, NIST Framework, Post-Quantum Crypto, HTTP Hardening, Burp, GDB, Ghidra} \\
      \textbf{DevOps \& Architecture}{: Docker, GitHub Actions, CI/CD, Build Automation, MVC Architecture, ROS2} \\
      \textbf{Methodologies}{: Agile (Scrum/Kanban), SDLC, QA \& Automated Testing, Requirements Analysis} \\
     }}
